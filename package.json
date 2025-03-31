@@ -21,6 +21,7 @@
         "vue": "^3.3.13"
     },
     "dependencies": {
-        "matice": "^1.2.0"
+        "matice": "^1.2.0",
+        "vue-lang-code-flags": "^1.0.13"
     }
 }

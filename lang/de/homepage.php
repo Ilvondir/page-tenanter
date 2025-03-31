@@ -12,7 +12,7 @@ return array (
   'Are you ready to start your adventure and start building the next great webpage?' => 'Bist du bereit, dein Abenteuer zu beginnen und die nächste großartige Webseite zu erstellen?\'',
   'Pricing' => 'Preise',
   'Features' => 'Funktionen',
-  'Are you ready to start your adventure and start building the next greatest webpage?' => 'Bist du bereit, dein Abenteuer zu beginnen und die nächste großartige Webseite zu erstellen?\'',
   'Distributed by' => 'Vertrieben von',
   'Crafting the next level of user experience and user interfaces' => 'Gestaltung der nächsten Stufe der Benutzererfahrung und Benutzeroberflächen',
+  'Are you ready to start your adventure and start building the next greatest webpage?' => 'Bist du bereit, dein Abenteuer zu beginnen und die nächste großartige Webseite zu erstellen?',
 );
