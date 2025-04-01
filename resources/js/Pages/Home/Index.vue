@@ -1,12 +1,16 @@
 <script setup>
 import {onMounted, ref} from "vue";
-import {__} from "matice";
+import {__, setLocale} from "matice";
 import {Head, Link} from '@inertiajs/vue3'
 import ApplicationMark from "@/Components/ApplicationMark.vue";
 import NavLink from "@/Components/NavLink.vue";
 import LanguageDropdown from "@/Components/LanguageDropdown.vue";
 
 const url = ref('');
+
+if (localStorage.getItem('language')) {
+    setLocale(localStorage.getItem('language'));
+}
 
 onMounted(() => {
     if (document.getElementById('nav-mobile-btn')) {
@@ -69,7 +73,7 @@ onMounted(() => {
                     </div>
                     <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
                         <Link :href="route('login')" class="w-full py-2 font-bold text-center">
-                            {{ __('homepage.Login') }}
+                            {{ __('Log in') }}
                         </Link>
                     </div>
                 </nav>
@@ -83,7 +87,7 @@ onMounted(() => {
 
                         <Link :href="route('login')"
                               class="relative z-30 px-3 py-2 mr-0 text-md font-bold text-black md:px-5 sm:mr-3 md:mt-0">
-                            {{ __('homepage.Login') }}
+                            {{ __('Log in') }}
                         </Link>
 
                     </div>

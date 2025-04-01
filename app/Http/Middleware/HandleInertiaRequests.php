@@ -37,6 +37,7 @@ class HandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'logo_url' => asset('img/icon.png'),
+            'full_size_logo_url' => asset('img/icon-full-size.png'),
         ]);
     }
 }

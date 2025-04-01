@@ -4,15 +4,21 @@ import Dropdown from "@/Components/Dropdown.vue";
 import DropdownLink from "@/Components/DropdownLink.vue";
 import {__, setLocale, getLocale} from "matice";
 import NavLink from "@/Components/NavLink.vue";
+import {onActivated, onMounted} from "vue";
 
 
-const languages = {
+const locales = {
     pl: 'Polish',
     en: 'English',
     de: 'Deutsch',
 }
-const changeLanguage = (lang) => {
-    setLocale(lang)
+const changeLanguage = (locale) => {
+    setLocale(locale)
+    localStorage.setItem('language', locale)
+}
+
+if (localStorage.getItem('language')) {
+    setLocale(localStorage.getItem('language'));
 }
 
 </script>
@@ -23,9 +29,9 @@ const changeLanguage = (lang) => {
         <template #trigger>
 
             <a class="px-3 py-2 mr-0 text-sm md:px-5 text-gray-500 font-medium sm:mr-3 md:mt-0 cursor-pointer font-bold">
-                <LangFlag :iso="getLocale()" :title="__('locales.' + languages[getLocale()])" :squared="true"
+                <LangFlag :iso="getLocale()" :title="__('locales.' + locales[getLocale()])" :squared="true"
                           class="rounded-[50%] mr-1"></LangFlag>
-                {{ __('locales.' + languages[getLocale()]) }}
+                {{ __('locales.' + locales[getLocale()]) }}
             </a>
 
         </template>
