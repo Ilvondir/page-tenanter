@@ -8,8 +8,8 @@ import LanguageDropdown from "@/Components/LanguageDropdown.vue";
 
 const url = ref('');
 
-if (localStorage.getItem('language')) {
-    setLocale(localStorage.getItem('language'));
+if (localStorage.getItem('locale')) {
+    setLocale(localStorage.getItem('locale'));
 }
 
 onMounted(() => {
@@ -31,9 +31,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <Head>
-        <title>Homepage</title>
-    </Head>
+    <Head :title="__('Homepage')"/>
 
     <div class="overflow-x-hidden antialiased">
 

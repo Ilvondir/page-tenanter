@@ -3,9 +3,6 @@ import LangFlag from 'vue-lang-code-flags';
 import Dropdown from "@/Components/Dropdown.vue";
 import DropdownLink from "@/Components/DropdownLink.vue";
 import {__, setLocale, getLocale} from "matice";
-import NavLink from "@/Components/NavLink.vue";
-import {onActivated, onMounted} from "vue";
-
 
 const locales = {
     pl: 'Polish',
@@ -14,11 +11,12 @@ const locales = {
 }
 const changeLanguage = (locale) => {
     setLocale(locale)
-    localStorage.setItem('language', locale)
+    localStorage.setItem('locale', locale)
+    location.reload();
 }
 
-if (localStorage.getItem('language')) {
-    setLocale(localStorage.getItem('language'));
+if (localStorage.getItem('locale')) {
+    setLocale(localStorage.getItem('locale'));
 }
 
 </script>
@@ -28,7 +26,7 @@ if (localStorage.getItem('language')) {
 
         <template #trigger>
 
-            <a class="px-3 py-2 mr-0 text-sm md:px-5 text-gray-500 font-medium sm:mr-3 md:mt-0 cursor-pointer font-bold">
+            <a class="py-2 mr-0 text-sm md:px-5 text-gray-500 font-medium md:mt-0 cursor-pointer font-bold">
                 <LangFlag :iso="getLocale()" :title="__('locales.' + locales[getLocale()])" :squared="true"
                           class="rounded-[50%] mr-1"></LangFlag>
                 {{ __('locales.' + locales[getLocale()]) }}
@@ -37,23 +35,26 @@ if (localStorage.getItem('language')) {
         </template>
 
         <template #content>
+            <div class="text-left">
+                <DropdownLink as="button" @click="() => changeLanguage('en')">
+                    <LangFlag iso="en" :title="__('locales.English')" :squared="true"
+                              class="rounded-[50%] mr-2"></LangFlag>
+                    {{ __('locales.English') }}
+                </DropdownLink>
 
-            <DropdownLink @click="() => changeLanguage('en')">
-                <LangFlag iso="en" :title="__('locales.English')" :squared="true"
-                          class="rounded-[50%] mr-2"></LangFlag>
-                {{ __('locales.English') }}
-            </DropdownLink>
+                <DropdownLink as="button" @click="() => changeLanguage('de')">
+                    <LangFlag iso="de" :title="__('locales.Deutsch')" :squared="true"
+                              class="rounded-[50%] mr-2"></LangFlag>
+                    {{ __('locales.Deutsch') }}
+                </DropdownLink>
 
-            <DropdownLink @click="() => changeLanguage('de')">
-                <LangFlag iso="de" :title="__('locales.Deutsch')" :squared="true" class="rounded-[50%] mr-2"></LangFlag>
-                {{ __('locales.Deutsch') }}
-            </DropdownLink>
+                <DropdownLink as="button" @click="() => changeLanguage('pl')">
+                    <LangFlag iso="pl" :title="__('locales.Polish')" :squared="true"
+                              class="rounded-[50%]  mr-2"></LangFlag>
+                    {{ __('locales.Polish') }}
+                </DropdownLink>
+            </div>
 
-            <DropdownLink @click="() => changeLanguage('pl')">
-                <LangFlag iso="pl" :title="__('locales.Polish')" :squared="true"
-                          class="rounded-[50%]  mr-2"></LangFlag>
-                {{ __('locales.Polish') }}
-            </DropdownLink>
 
         </template>
     </Dropdown>
