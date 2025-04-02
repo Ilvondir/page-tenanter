@@ -10,7 +10,6 @@ const locales = {
     de: 'Deutsch',
 }
 const changeLanguage = (locale) => {
-    setLocale(locale)
     localStorage.setItem('locale', locale)
     location.reload();
 }

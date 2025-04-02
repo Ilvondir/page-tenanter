@@ -1,6 +1,8 @@
 <?php
 
 return array (
+  'Our Features' => 'Nasze funkcje',
+  'Media & Video' => 'Media & Wideo',
   'Used:' => 'Wykorzystywane:',
   'Home' => 'Strona główna',
   'Pricing' => 'Cennik',
@@ -15,4 +17,11 @@ return array (
   'Login' => 'Logowanie',
   'Distributed by' => 'Wykonane przez',
   'Crafting the next level of user experience and user interfaces' => 'Tworzenie następnego poziomu doświadczeń użytkownika i interfejsów użytkownika',
+  'Add interactive components that enhance the user experience!' => 'Dodaj interaktywne komponenty, które wzbogacą doświadczenie użytkowników!',
+  'Use ready-made blocks to quickly create attractive layouts without coding!' => 'Korzystaj z gotowych bloków, które pozwolą Ci błyskawicznie tworzyć atrakcyjne układy bez kodowania.',
+  'Built and Designed with you in Mind' => 'Zbudowane i zaprojektowane z myślą o Tobie',
+  'Add videos, animations, and dynamic elements to your site easily. Make your website modern and engaging!' => 'Dodawaj wideo, animacje i dynamiczne elementy do swojej strony w prosty sposób. Spraw, by Twoja witryna była nowoczesna i angażująca!',
+  'Interactive Elements' => 'Interaktywne Elementy',
+  'Advanced Blocks' => 'Zaawansowane Bloki',
+  'Add videos, animations, and dynamic elements to your site easily' => 'Dodawaj wideo, animacje i dynamiczne elementy do swojej strony w prosty sposób.',
 );

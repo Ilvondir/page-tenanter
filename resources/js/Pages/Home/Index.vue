@@ -84,7 +84,7 @@ onMounted(() => {
                         <LanguageDropdown/>
 
                         <Link :href="route('login')"
-                              class="relative z-30 px-3 py-2 mr-0 text-md font-bold text-black md:px-5 sm:mr-3 md:mt-0">
+                              class="relative z-30 px-3 py-2 mr-0 text-md font-bold text-black md:px-5 sm:mr-3 md:mt-0 bg-sky-600 rounded text-white">
                             {{ __('Log in') }}
                         </Link>
 
@@ -235,10 +235,13 @@ onMounted(() => {
         <div id="features"
              class="relative w-full px-8 py-10 border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
             <div class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
-                <h2 class="my-5 text-base font-medium tracking-tight text-sky-500 uppercase">Our Features</h2>
+                <h2 class="my-5 text-base font-medium tracking-tight text-sky-500 uppercase">
+                    {{ __('homepage.Our Features') }}
+                </h2>
                 <h3
-                    class="max-w-2xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
-                    Built and Designed with you in Mind</h3>
+                    class="max-w-5xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
+                    {{ __('homepage.Built and Designed with you in Mind') }}
+                </h3>
                 <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20">
 
                     <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
@@ -299,13 +302,14 @@ onMounted(() => {
                                     </g>
                                 </g>
                             </svg>
-                            <h4 class="relative mt-6 text-lg font-bold">Automated Tools</h4>
-                            <p class="relative mt-2 text-base text-center text-gray-600">Automate your workflow with
-                                these
-                                top of the
-                                line marketing tools.</p>
-                            <a href="#_" class="relative flex mt-2 text-sm font-medium text-sky-500 underline">Learn
-                                More</a>
+                            <h4 class="relative mt-6 text-lg font-bold">
+                                {{ __('homepage.Media & Video') }}
+                            </h4>
+                            <p class="relative mt-2 text-base text-center text-gray-600">
+                                {{
+                                    __('homepage.Add videos, animations, and dynamic elements to your site easily')
+                                }}
+                            </p>
                         </div>
                     </div>
 
@@ -366,13 +370,14 @@ onMounted(() => {
                                     </g>
                                 </g>
                             </svg>
-                            <h4 class="relative mt-6 text-lg font-bold">Machine Learning</h4>
-                            <p class="relative mt-2 text-base text-center text-gray-600">Your Marketing tools will learn
-                                how
-                                to better
-                                convert and sell.</p>
-                            <a href="#_" class="relative flex mt-2 text-sm font-medium text-sky-500 underline">Learn
-                                More</a>
+                            <h4 class="relative mt-6 text-lg font-bold">
+                                {{ __('homepage.Advanced Blocks') }}
+                            </h4>
+                            <p class="relative mt-2 text-base text-center text-gray-600">
+                                {{
+                                    __('homepage.Use ready-made blocks to quickly create attractive layouts without coding!')
+                                }}
+                            </p>
                         </div>
                     </div>
 
@@ -432,13 +437,14 @@ onMounted(() => {
                                     </g>
                                 </g>
                             </svg>
-                            <h4 class="relative mt-6 text-lg font-bold">Smart Notifications</h4>
-                            <p class="relative mt-2 text-base text-center text-gray-600">Our smart notifications will
-                                notify
-                                you when
-                                users convert.</p>
-                            <a href="#_" class="relative flex mt-2 text-sm font-medium text-sky-500 underline">Learn
-                                More</a>
+                            <h4 class="relative mt-6 text-lg font-bold">
+                                {{ __('homepage.Interactive Elements') }}
+                            </h4>
+                            <p class="relative mt-2 text-base text-center text-gray-600">
+                                {{
+                                    __('homepage.Add interactive components that enhance the user experience!')
+                                }}
+                            </p>
                         </div>
                     </div>
 
