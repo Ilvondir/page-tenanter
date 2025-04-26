@@ -5,6 +5,7 @@ import {Head, Link} from '@inertiajs/vue3'
 import ApplicationMark from "@/Components/ApplicationMark.vue";
 import NavLink from "@/Components/NavLink.vue";
 import LanguageDropdown from "@/Components/LanguageDropdown.vue";
+import {_} from "../../../../public/build/assets/_plugin-vue_export-helper-DlAUqK2U.js";
 
 const url = ref('');
 
@@ -526,7 +527,7 @@ onMounted(() => {
                                 </div>
                                 <div class="flex items-center block p-8 uppercase">
                                     <a href="#_"
-                                       class="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-green-600">
+                                       class="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-sky-600">
                                         {{
                                             __('homepage.Select This Plan')
                                         }}
@@ -617,16 +618,18 @@ onMounted(() => {
                 <div class="flex-col items-center ">
                     <div
                         class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
-                        <p class="my-5 text-base font-medium tracking-tight text-sky-500 uppercase">Our customers
-                            love
-                            our product
+                        <p class="my-5 text-base font-medium tracking-tight text-sky-500 uppercase">
+                            {{ __('homepage.Our customers love our product') }}
                         </p>
                         <h2
                             class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
-                            Testimonials</h2>
-                        <p class="my-6 text-xl font-medium text-gray-500">Don't just take our word for it, read from our
-                            extensive
-                            list of case studies and customer testimonials.</p>
+                            {{ __('homepage.Opinions') }}
+                        </h2>
+                        <p class="my-6 text-xl font-medium text-gray-500">
+                            {{
+                                __("homepage.Don't just take our word for it, read from our extensive list of case studies and customer testimonials")
+                            }}
+                        </p>
 
                     </div>
                     <div
@@ -743,7 +746,7 @@ onMounted(() => {
             <div class="container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row">
                 <div class="w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0 lg:text-left">
                     <a href="/"
-                       class="flex justify-start block text-left sm:text-center lg:text-left sm:justify-center lg:justify-start">
+                       class="block text-left sm:text-center lg:text-left sm:justify-center lg:justify-start w-12">
                         <ApplicationMark class="w-12"/>
                     </a>
                     <p class="mt-6 mr-4 text-base text-gray-500">
@@ -753,68 +756,56 @@ onMounted(() => {
                 <div class="block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0">
                     <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
                         <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
-                            Product
+                            {{ __('homepage.Product') }}
                         </li>
-                        <li><a href="#_"
-                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Features</a>
+                        <li><a href="#features"
+                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">{{
+                                __('homepage.Features')
+                            }}</a>
                         </li>
-                        <li><a href="#_"
-                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Integrations</a>
+                        <li><a href="#pricing"
+                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">{{
+                                __('homepage.Pricing')
+                            }}</a>
                         </li>
-                        <li><a href="#_"
-                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Pricing</a>
+                        <li><a href="#testimonials"
+                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">{{
+                                __('homepage.Opinions')
+                            }}</a>
                         </li>
-                        <li><a href="#_"
-                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">FAQ</a>
-                        </li>
-                    </ul>
-                    <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
-                        <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
-                            Company
-                        </li>
-                        <li><a href="#_"
-                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Privacy</a>
-                        </li>
-                        <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Terms
-                            of
-                            Service</a></li>
                     </ul>
                     <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
                         <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
                             TailwindCSS
                         </li>
                         <li><a href="https://devdojo.com/tailwindcss/components"
-                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tailwind
-                            Components</a></li>
+                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">
+                            {{ __('homepage.Tailwind Components') }}
+                        </a></li>
                         <li><a href="https://devdojo.com/tailwindcss/templates"
-                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tailwind
-                            Templates</a></li>
+                               class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">
+                            {{ __('homepage.Tailwind Templates') }}
+                        </a></li>
                         <li><a href="https://devdojo.com/tails"
                                class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tails</a>
                         </li>
                     </ul>
                     <div class="flex flex-col w-full text-gray-700">
-                        <div class="inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0">Follow Us
+                        <div class="inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0">
+                            {{ __('homepage.Follow Us') }}
                         </div>
                         <div class="flex justify-start pl-4 mt-2">
                             <a class="flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600"
-                               target="_blank" rel="noopener noreferrer" href="https://devdojo.com">
+                               target="_blank" rel="noopener noreferrer"
+                               href="https://www.facebook.com/profile.php?id=100010293456903">
                                 <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/>
                                 </svg>
                             </a>
-                            <a class="flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600"
-                               target="_blank" rel="noopener noreferrer" href="https://devdojo.com">
-                                <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"/>
-                                </svg>
-                            </a>
                             <a class="flex items-center block text-gray-400 no-underline hover:text-gray-600"
-                               target="_blank" rel="noopener noreferrer" href="https://devdojo.com">
+                               target="_blank" rel="noopener noreferrer" href="https://github.com/Ilvondir">
                                 <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
